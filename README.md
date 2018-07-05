@@ -134,7 +134,7 @@ MemberExpression[Yield] :
 The built-in types are extended as follows:
 
 ```js
-Function.prototype[Symbol.referenceGet] = function(base) { return this };
+Function.prototype[Symbol.referenceGet] = function(base) { return this.bind(base); };
 
 Map.prototype[Symbol.referenceGet] = Map.prototype.get;
 Map.prototype[Symbol.referenceSet] = Map.prototype.set;
